@@ -71,6 +71,7 @@
     <Content Include="App_Data\RnGC_log.ldf">
       <DependentUpon>RnGC.mdf</DependentUpon>
     </Content>
+    <Content Include="garbage_com.aspx" />
     <Content Include="homepage\assets\css\font-awesome.min.css" />
     <Content Include="homepage\assets\css\main.css" />
     <Content Include="homepage\assets\fonts\fontawesome-webfont.svg" />
@@ -187,10 +188,18 @@
     <Content Include="Login_v13\vendor\select2\select2.js" />
     <Content Include="Login_v13\vendor\select2\select2.min.css" />
     <Content Include="Login_v13\vendor\select2\select2.min.js" />
+    <Content Include="road_com.aspx" />
     <Content Include="signup_page.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="garbage_com.aspx.cs">
+      <DependentUpon>garbage_com.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="garbage_com.aspx.designer.cs">
+      <DependentUpon>garbage_com.aspx</DependentUpon>
+    </Compile>
     <Compile Include="header.Master.cs">
       <DependentUpon>header.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -220,6 +229,13 @@
       <DependentUpon>login_page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="road_com.aspx.cs">
+      <DependentUpon>road_com.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="road_com.aspx.designer.cs">
+      <DependentUpon>road_com.aspx</DependentUpon>
+    </Compile>
     <Compile Include="signup_page.aspx.cs">
       <DependentUpon>signup_page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
