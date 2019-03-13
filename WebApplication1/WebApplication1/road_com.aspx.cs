@@ -12,6 +12,8 @@ namespace Road_Garbage_Complain_System
 {
     public partial class road_com : System.Web.UI.Page
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
+            AttachDbFilename=|DataDirectory|\RnGC.mdf");
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,7 +21,6 @@ namespace Road_Garbage_Complain_System
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\RnGC.mdf");
             con.Open();
             if(!FileUpload1.HasFile)
             {
@@ -29,7 +30,7 @@ namespace Road_Garbage_Complain_System
                 int length = FileUpload1.PostedFile.ContentLength;
                 byte[] pic = new byte[length];
                 FileUpload1.PostedFile.InputStream.Read(pic, 0, length);
-                SqlCommand cmd = new SqlCommand("insert into Road values('"+TextBox5.Text+"','"+TextBox2.Text+"','"+TextBox3.Text+"','"+FileUpload1+"','"+TextBox4.Text+"')", con);
+                SqlCommand cmd = new SqlCommand("insert into Road values('"+TextBox5.Text+"','"+TextBox2.Text+"','"+TextBox3.Text+"','"+TextBox4.Text+ "','" + FileUpload1 + "')", con);
                 cmd.ExecuteNonQuery();
                 con.Close();
 
