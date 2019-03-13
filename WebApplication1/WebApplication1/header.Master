@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Header.master.cs" Inherits="Road_Garbage_Complain_System.Header" %>
+
+<!DOCTYPE HTML>
+
+<html>
+	<head  runat="server">
+		<title>RnGCS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="homepage/assets/css/main.css" />
+
+	</head>
+	<body>
+        <form id="form1" runat="server">
+    
+		    <!-- Header -->
+			    <header id="header" class="alt">
+				    <div class="logo">Road <span>and Garbage complain system</span></div>
+				    <a href="#menu">Menu</a>
+			    </header>
+
+            <!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+                    <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="index.aspx">Home</asp:HyperLink></li>
+					<li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="login_page.aspx">Login</asp:HyperLink></li>
+					<li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="signup_page.aspx">Sign Up</asp:HyperLink></li>
+					<li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="contact_page.aspx">Contact US</asp:HyperLink></li>
+                    
+				</ul>
+			</nav>
+
+		    <asp:ContentPlaceHolder ID="cph" runat="server">
+            </asp:ContentPlaceHolder>
+
+		    <!-- Footer -->
+			    <footer id="footer">
+				    <div class="container">
+					    <ul class="icons">
+						    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						    <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					    </ul>
+				    </div>
+				    <div class="copyright">
+					    &copy; Harsh & Kush. All rights reserved.
+				    </div>
+			    </footer>
+
+		    <!-- Scripts -->
+			    <script src="homepage/assets/js/jquery.min.js"></script>
+			    <script src="homepage/assets/js/jquery.scrollex.min.js"></script>
+			    <script src="homepage/assets/js/skel.min.js"></script>
+			    <script src="homepage/assets/js/util.js"></script>
+			    <script src="homepage/assets/js/main.js"></script>
+        </form>
+	</body>
+</html>
