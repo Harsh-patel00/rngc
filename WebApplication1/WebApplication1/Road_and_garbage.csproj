@@ -67,10 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin.aspx" />
     <Content Include="App_Data\RnGC.mdf" />
     <Content Include="App_Data\RnGC_log.ldf">
       <DependentUpon>RnGC.mdf</DependentUpon>
     </Content>
+    <Content Include="confirm.aspx" />
     <Content Include="garbage_com.aspx" />
     <Content Include="homepage\assets\css\font-awesome.min.css" />
     <Content Include="homepage\assets\css\main.css" />
@@ -193,6 +195,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="confirm.aspx.cs">
+      <DependentUpon>confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="confirm.aspx.designer.cs">
+      <DependentUpon>confirm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="garbage_com.aspx.cs">
       <DependentUpon>garbage_com.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
