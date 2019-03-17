@@ -18,15 +18,16 @@
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:constrng %>" SelectCommand="SELECT * FROM [Road]"></asp:SqlDataSource>
             <br />
             <br />
+            <asp:Label ID="Label3" runat="server" Text="ID :"></asp:Label>
             <br />
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Edit" />
             <br />
-            <asp:Label ID="Label1" runat="server" Text="City"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="City :"></asp:Label>
             <br />
             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             <br />
-            <br />
-            <asp:Label ID="Label2" runat="server" Text="location"></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="location :"></asp:Label>
             <br />
             <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
             <br />

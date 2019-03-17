@@ -29,5 +29,18 @@ namespace Road_Garbage_Complain_System
             con.Close();
             Response.Redirect("confirm.aspx");
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Road where id='" + TextBox1.Text + "'", con);
+            DataSet ds = new DataSet();
+            da.Fill(ds,"Road");
+            DataTable dt = ds.Tables[0];
+            con.Close();
+            TextBox1.Text = dt.Rows[0]["id"].ToString();
+            TextBox2.Text = dt.Rows[0]["city"].ToString();
+            TextBox3.Text = dt.Rows[0]["location"].ToString();
+        }
     }
 }
