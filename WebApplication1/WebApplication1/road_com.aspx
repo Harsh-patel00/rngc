@@ -4,14 +4,13 @@
 
    
     
-     <asp:Label ID="Label1" runat="server" Text="City :"></asp:Label>
-    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+     <br />
+     <br />
     
 
      <br />
      <asp:Label ID="Label5" runat="server" Text="Id :"></asp:Label>
      <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-     <br />
     
 
      <asp:Label ID="Label2" runat="server" Text="City :"></asp:Label>

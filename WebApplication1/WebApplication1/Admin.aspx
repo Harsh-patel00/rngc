@@ -9,9 +9,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="197px" Width="849px">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="197px" Width="849px" DataKeyNames="Id">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
+                    <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" ReadOnly="True" />
                     <asp:BoundField DataField="uname" HeaderText="uname" SortExpression="uname" />
                     <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
                     <asp:BoundField DataField="area" HeaderText="area" SortExpression="area" />
@@ -28,8 +29,17 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:constrng %>" SelectCommand="SELECT [uname], [city], [image_garbage], [image_road], [complaint], [area] FROM [admin_table]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:constrng %>" SelectCommand="SELECT * FROM [admin_table]"></asp:SqlDataSource>
         </div>
+        <asp:Label ID="Label1" runat="server" Text="Id"></asp:Label>
+        <br />
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="View images" />
+&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Delete complaint" />
+        <br />
     </form>
 </body>
 </html>

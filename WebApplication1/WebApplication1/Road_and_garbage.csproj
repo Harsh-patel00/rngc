@@ -74,6 +74,7 @@
     </Content>
     <Content Include="confirm.aspx" />
     <Content Include="garbage_com.aspx" />
+    <Content Include="get_images.aspx" />
     <Content Include="homepage\assets\css\font-awesome.min.css" />
     <Content Include="homepage\assets\css\main.css" />
     <Content Include="homepage\assets\fonts\fontawesome-webfont.svg" />
@@ -215,6 +216,13 @@
     </Compile>
     <Compile Include="garbage_com.aspx.designer.cs">
       <DependentUpon>garbage_com.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="get_images.aspx.cs">
+      <DependentUpon>get_images.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="get_images.aspx.designer.cs">
+      <DependentUpon>get_images.aspx</DependentUpon>
     </Compile>
     <Compile Include="header.Master.cs">
       <DependentUpon>header.Master</DependentUpon>
