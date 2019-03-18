@@ -29,6 +29,7 @@ namespace Road_Garbage_Complain_System
             cmd = new SqlCommand("delete from Road where Id = ('" + TextBox1.Text + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
+            Response.Redirect("Admin.aspx");
         }
 
         protected void Button1_Click(object sender, EventArgs e)

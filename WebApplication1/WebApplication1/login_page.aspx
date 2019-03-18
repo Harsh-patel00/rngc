@@ -35,14 +35,12 @@
     <script type="text/javascript">
     function check() {
         var username = TextBox1.Text;
-        PageMethods.check(username, function (response) {
+        PageMethods.CheckUserName(username, function (response) {
             var message = document.getElementById("message");
             if (response) {
-                //Username available.
                 Response.redirect("index.aspx");
             }
             else {
-                //Username not available.
                 Response.redirect("login_page.aspx");
             }
         });
@@ -86,7 +84,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-                            <asp:Button ID="Button2" runat="server" Text="Login" OnClick="Button2_Click" />
+                            <asp:Button ID="Button2" runat="server" Text="Login"/>
 						</div>
                         <div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>

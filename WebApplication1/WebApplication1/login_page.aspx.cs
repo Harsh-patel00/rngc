@@ -22,7 +22,7 @@ namespace WebApplication1
             Application["a_uname"] = TextBox1.Text;
             Application["a_pass"] = TextBox2.Text;
 
-            if (Application["a_uname"] == Session["uname"] && Application["a_pass"] == Session["pass"])
+            if (TextBox1.Text == Session["uname"].ToString() && TextBox2.Text == Session["pass"].ToString())
             {
                 Response.Redirect("index.aspx");
             }
@@ -43,7 +43,7 @@ namespace WebApplication1
         }
 
         public static bool check(string username)
-        {
+        { 
             bool status = false;
             string constr = ConfigurationManager.ConnectionStrings["constrng"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(constr))
@@ -58,6 +58,8 @@ namespace WebApplication1
                 }
             }
             return status;
+
+
         }
     }
 }

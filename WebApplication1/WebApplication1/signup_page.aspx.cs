@@ -29,6 +29,7 @@ namespace WebApplication2
             Session["uname"] = TextBox3.Text;
             Session["pass"] = TextBox4.Text;
             cmd.ExecuteNonQuery();
+            Response.Redirect("login_page.aspx");
             con.Close();
         }
 
