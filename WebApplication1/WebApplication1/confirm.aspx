@@ -34,6 +34,8 @@
         </div>
         <p>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Delete" />
         </p>
     </form>
 </body>

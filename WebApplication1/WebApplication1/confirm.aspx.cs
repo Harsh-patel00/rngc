@@ -42,5 +42,14 @@ namespace Road_Garbage_Complain_System
             TextBox2.Text = dt.Rows[0]["city"].ToString();
             TextBox3.Text = dt.Rows[0]["location"].ToString();
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("delete from Road where Id=('"+TextBox1.Text+"')" ,con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        
+        }
     }
 }
