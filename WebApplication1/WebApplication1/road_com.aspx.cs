@@ -31,9 +31,10 @@ namespace Road_Garbage_Complain_System
                 byte[] pic = new byte[length];
                 FileUpload1.PostedFile.InputStream.Read(pic, 0, length);
                 SqlCommand cmd = new SqlCommand("insert into Road values('"+TextBox5.Text+"','"+TextBox2.Text+"','"+TextBox3.Text+"','"+TextBox4.Text+ "','" + FileUpload1 + "')", con);
+                SqlCommand cmmd = new SqlCommand("insert into admin_table values('" + TextBox2.Text + "','" + TextBox3.Text + "')", con);
                 cmd.ExecuteNonQuery();
+                cmmd.ExecuteNonQuery();
                 con.Close();
-
             }
 
             Response.Redirect("confirm.aspx");
