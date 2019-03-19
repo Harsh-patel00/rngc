@@ -16,7 +16,14 @@ namespace Road_Garbage_Complain_System
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("road_com.aspx");
+            if(!IsPostBack)
+            {
+                Response.Redirect("road_com.aspx");
+            }
+            else
+            {
+                Response.Redirect("login_page.aspx");
+            }
         }
 
         protected void Button2_Click(object sender, EventArgs e)

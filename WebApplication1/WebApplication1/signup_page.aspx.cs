@@ -24,8 +24,12 @@ namespace WebApplication2
         protected void Button1_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into RnGC_signup values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "')", con);
+            SqlCommand cmd = new SqlCommand("insert into RnGC_signup values('" + TextBox6.Text + "','" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "')", con);
+            Session["Id"] = TextBox6.Text;
+            Session["uname"] = TextBox3.Text;
+            Session["pass"] = TextBox4.Text;
             cmd.ExecuteNonQuery();
+            Response.Redirect("login_page.aspx");
             con.Close();
         }
 

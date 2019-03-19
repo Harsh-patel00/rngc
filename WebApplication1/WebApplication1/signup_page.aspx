@@ -52,10 +52,17 @@
 						Sign Up
 					</span>
 
+                    <div class="wrap-input100 validate-input">
+						<span class="label-input100">ID</span>
+                        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+						<span class="focus-input100"></span>
+					</div>
+
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Full Name</span>
                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-						<span class="focus-input100"></span></div>
+						<span class="focus-input100"></span>
+					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<span class="label-input100">Email</span>
@@ -77,7 +84,7 @@
 
 					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
 						<span class="label-input100">Repeat Password</span>
-                        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox5" runat="server" TextMode="Password"></asp:TextBox>
 						<span class="focus-input100"></span>
 					</div>
 
@@ -85,7 +92,9 @@
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
                             <asp:Button ID="Button1" runat="server" Text="Signup" OnClick="Button1_Click" />
-
+						</div>
+                        <div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
                             <asp:Button ID="Button2" runat="server" Text="Login" OnClick="Button2_Click" />
 						</div>
 					</div>

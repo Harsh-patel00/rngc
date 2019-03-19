@@ -30,12 +30,15 @@ namespace Road_Garbage_Complain_System
                 int length = FileUpload1.PostedFile.ContentLength;
                 byte[] pic = new byte[length];
                 FileUpload1.PostedFile.InputStream.Read(pic, 0, length);
+
                 SqlCommand cmd = new SqlCommand("insert into Road values('"+TextBox5.Text+"','"+TextBox2.Text+"','"+TextBox3.Text+"','"+TextBox4.Text+ "','" + FileUpload1 + "')", con);
-                cmd = new SqlCommand("insert into admin_table values('" + TextBox2.Text + "','" + TextBox3.Text + "')", con);
+              //  cmd = new SqlCommand("insert into admin_table values('" + TextBox5.Text + "','" + TextBox2.Text + "','" +TextBox3.Text+ "','" +TextBox4.Text+ "')", con);
+                Session["s_city"] = TextBox2.Text;
+                Session["s_location"] = TextBox3.Text;
+                Session["s_complaint"] = TextBox4.Text;
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-
             Response.Redirect("confirm.aspx");
         }
 
