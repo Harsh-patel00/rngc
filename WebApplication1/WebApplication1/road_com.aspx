@@ -1,13 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/header.Master" AutoEventWireup="true" CodeBehind="road_com.aspx.cs" Inherits="Road_Garbage_Complain_System.road_com" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cph" runat="server">
-   
-
-   
-    
-     <br />
-     <br />
+ 
     
 
+     <br />
+     <br />
      <br />
      <asp:Label ID="Label5" runat="server" Text="Id :"></asp:Label>
      <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
