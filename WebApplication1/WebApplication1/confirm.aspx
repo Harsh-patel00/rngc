@@ -13,9 +13,10 @@
                 <Columns>
                     <asp:BoundField DataField="city" HeaderText="city" ReadOnly="True" SortExpression="city" />
                     <asp:BoundField DataField="location" HeaderText="location" SortExpression="location" />
+                    <asp:BoundField DataField="complaint" HeaderText="complaint" SortExpression="complaint" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:constrng %>" SelectCommand="SELECT * FROM [Road]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:constrng %>" SelectCommand="SELECT [city], [location], [complaint] FROM [Road]"></asp:SqlDataSource>
             <br />
             <br />
             <asp:Label ID="Label3" runat="server" Text="ID :"></asp:Label>
@@ -30,6 +31,10 @@
             <asp:Label ID="Label2" runat="server" Text="location :"></asp:Label>
             <br />
             <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            <br />
+            <asp:Label ID="Label4" runat="server" Text="complaint :"></asp:Label>
+            <br />
+            <asp:TextBox ID="TextBox4" runat="server" TextMode="MultiLine"></asp:TextBox>
             <br />
         </div>
         <p>

@@ -41,6 +41,7 @@ namespace Road_Garbage_Complain_System
             TextBox1.Text = dt.Rows[0]["id"].ToString();
             TextBox2.Text = dt.Rows[0]["city"].ToString();
             TextBox3.Text = dt.Rows[0]["location"].ToString();
+            TextBox4.Text = dt.Rows[0]["complaint"].ToString();
         }
 
         protected void Button3_Click(object sender, EventArgs e)
