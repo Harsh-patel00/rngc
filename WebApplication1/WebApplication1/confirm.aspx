@@ -9,14 +9,16 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource2" AutoGenerateColumns="False" DataKeyNames="city">
+            <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource2" AutoGenerateColumns="False" DataKeyNames="id">
                 <Columns>
-                    <asp:BoundField DataField="city" HeaderText="city" ReadOnly="True" SortExpression="city" />
+<asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id"></asp:BoundField>
+                    <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
                     <asp:BoundField DataField="location" HeaderText="location" SortExpression="location" />
                     <asp:BoundField DataField="complaint" HeaderText="complaint" SortExpression="complaint" />
+                    <asp:HyperLinkField DataNavigateUrlFields="image" HeaderText="Display" Text="Show Image" NavigateUrl="https://www.google.com" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:constrng %>" SelectCommand="SELECT [city], [location], [complaint] FROM [Road]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:constrng %>" SelectCommand="SELECT * FROM [Road]"></asp:SqlDataSource>
             <br />
             <br />
             <asp:Label ID="Label3" runat="server" Text="ID :"></asp:Label>
@@ -40,7 +42,7 @@
         <p>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Delete" />
+            <asp:Button ID="Button3" runat="server"/>
         </p>
         <p>
             &nbsp;</p>
