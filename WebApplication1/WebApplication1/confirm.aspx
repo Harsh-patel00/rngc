@@ -42,6 +42,28 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Delete" />
         </p>
+        <p>
+            &nbsp;</p>
+        <asp:Label ID="Label5" runat="server" Text="Id :"></asp:Label>
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource3" DataTextField="id" DataValueField="id">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:constrng %>" SelectCommand="SELECT [id] FROM [Road]"></asp:SqlDataSource>
+        <br />
+        <br />
+        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource4">
+            <Columns>
+                <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" />
+                <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" />
+                <asp:BoundField DataField="location" HeaderText="location" SortExpression="location" />
+                <asp:BoundField DataField="complaint" HeaderText="complaint" SortExpression="complaint" />
+            </Columns>
+        </asp:GridView>
+        <br />
+        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:constrng %>" SelectCommand="SELECT * FROM [Road] WHERE ([id] = @id)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="DropDownList1" Name="id" PropertyName="SelectedValue" Type="Decimal" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </form>
 </body>
 </html>
