@@ -2,8 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Button ID="Button1" runat="server" Text="Road Info" OnClick="Button1_Click" />
+    <asp:Button ID="Button1" runat="server" Text="Road Complaint" OnClick="Button1_Click" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <asp:Button ID="Button2" runat="server" Text="Garbage Info" OnClick="Button2_Click" />
+    <asp:Button ID="Button2" runat="server" Text="Garbage Complaint" OnClick="Button2_Click" />
 </asp:Content>

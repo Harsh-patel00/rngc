@@ -12,6 +12,8 @@ namespace WebApplication1
 {
     public partial class login_page : System.Web.UI.Page
     {
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;
+            AttachDbFilename=|DataDirectory|\RnGC.mdf");
         protected void Page_Load(object sender, EventArgs e)
         {
             Label1.Visible = false;
@@ -19,14 +21,24 @@ namespace WebApplication1
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Application["a_uname"] = TextBox1.Text;
-            Application["a_pass"] = TextBox2.Text;
+        }
 
-            if (TextBox1.Text == Session["uname"].ToString() && TextBox2.Text == Session["pass"].ToString())
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("signup_page.aspx");
+        }
+
+        protected void Button2_Click1(object sender, EventArgs e)
+        {
+            Session["a_user"] = "admin";
+            Session["a_pass"] = "admin1";
+
+            if ((TextBox1.Text != null) && (TextBox2.Text!=null))
             {
+                Application["login_username"] = TextBox1.Text;
                 Response.Redirect("index.aspx");
             }
-            else if ((Application["a_uname"].ToString() == "harsh" && Application["a_pass"].ToString() == "admin") || (Application["a_uname"].ToString() == "kush" && Application["a_pass"].ToString() == "admin"))
+            else if (TextBox1.Text == Session["a_user"].ToString() && TextBox2.Text == Session["a_pass"].ToString())
             {
                 Response.Redirect("Admin.aspx");
             }
@@ -35,31 +47,8 @@ namespace WebApplication1
                 Label1.Visible = true;
                 Label1.Text = "User does not exists !";
             }
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("signup_page.aspx");
-        }
-
-        public static bool check(string username)
-        { 
-            bool status = false;
-            string constr = ConfigurationManager.ConnectionStrings["constrng"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(constr))
-            {
-                using (SqlCommand cmd = new SqlCommand("check", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Username", username.Trim());
-                    conn.Open();
-                    status = Convert.ToBoolean(cmd.ExecuteScalar());
-                    conn.Close();
-                }
-            }
-            return status;
-
-
+            //Application["login_username"] = TextBox1.Text;
+            //Response.Redirect("index.aspx");
         }
     }
 }

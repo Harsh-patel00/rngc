@@ -84,7 +84,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-                            <asp:Button ID="Button2" runat="server" Text="Login"/>
+                            <asp:Button ID="Button2" runat="server" Text="Login" OnClick="Button2_Click1"/>
 						</div>
                         <div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
